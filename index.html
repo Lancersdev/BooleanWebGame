@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Aljabar Boolean</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="clearUsername()">
+    <div class="banner" onclick="goHome()">
+        <h1>Game Aljabar Boolean</h1>
+    </div>
+    <div id="timer" style="display: none;">
+        <div id="timerBar"></div>
+    </div>
+    <div class="game-container">
+        <div class="header">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="username" placeholder=" ">
+            <button onclick="startGame()">Start</button>
+        </div>
+        <div id="game" style="display:none;">
+            <h2 id="question"></h2>
+            <button class="button button-true" onclick="submitAnswer(true)">True</button>
+            <button class="button button-false" onclick="submitAnswer(false)">False</button>
+            <h3 id="score">Score: 0</h3>
+        </div>
+    </div>
+    <div class="leaderboard-container">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard"></ul>
+    </div>
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <p id="alertMessage"></p>
+            <button class="button button-ok" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
